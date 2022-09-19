@@ -11,7 +11,7 @@ class ProcessarInformacoesIsoController extends Controller
         $codigos   = json_decode($code);
         $resultado = [];
 
-        if (null == $codigos) {
+        if (null === $codigos || is_numeric($codigos) || ctype_alpha($codigos)) {
             return $this->processar($code, $response);
         }
 
@@ -84,5 +84,7 @@ class ProcessarInformacoesIsoController extends Controller
 
             return $listaDeIsos[$indice];
         }
+
+        return response()->json(['errors' => ['code' => ['Nenhuma informação encontrada para o código ' . $code]]], 200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'], JSON_UNESCAPED_UNICODE);
     }
 }
