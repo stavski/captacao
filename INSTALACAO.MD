@@ -10,7 +10,7 @@
 
 2- php artisan key:generate
 
-3- php artisan migrate (após a configuyração do seu banco de dados)
+3- php artisan migrate (após a configuração do seu banco de dados)
 
 ## Configurações
 
