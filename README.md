@@ -65,7 +65,6 @@ OU
   ]  
 }]  
 ```  
-> Esses valores de entrada e saída são apenas exemplos, sinta se a vontade para melhorá-los.
 
 ## Observações:
 
